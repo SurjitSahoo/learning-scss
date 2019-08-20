@@ -146,7 +146,7 @@ body {
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #7ed56f;
-  padding-inline: 3px;
+  padding: 3px;
   transition: all .2s; }
 
 .btn-text:hover {
@@ -158,6 +158,32 @@ body {
 .btn-text:active {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-1px); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0px 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    position: absolute;
+    transition: all .2s;
+    outline-offset: 1.5rem; }
+    .composition__photo--p1 {
+      top: -2rem;
+      left: 0; }
+    .composition__photo--p2 {
+      top: 2rem;
+      right: 0; }
+    .composition__photo--p3 {
+      top: 10rem;
+      left: 20%; }
+    .composition__photo:hover {
+      outline: 1rem solid #7ed56f;
+      transform: scale(1.25) translateY(-2rem);
+      box-shadow: 0px 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 1; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 .header {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
