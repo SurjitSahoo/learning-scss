@@ -1,7 +1,12 @@
 .footer {
   background-color: $color-gray-light-3;
-  padding: 10rem;
+  padding: 10rem 0;
   font-size: 1.4rem;
+  color: $color-gray-light-2;
+
+  @include respond(phone) {
+    padding: 8rem 0;
+  }
 
   &__logo_box {
     text-align: center;
@@ -15,8 +20,13 @@
 
   &__navigation {
     border-top: 1px solid $color-gray;
-    padding-top: 5rem;
+    padding-top: 2rem;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
 
     &__list {
       list-style: none;
@@ -52,8 +62,12 @@
   &__copyright {
     float: right;
     width: 80%;
-    color: $color-gray-light-2;
     border-top: 1px solid $color-gray;
     padding-top: 5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      float: none;
+    }
   }
 }
