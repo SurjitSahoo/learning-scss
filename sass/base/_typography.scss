@@ -4,7 +4,6 @@ body {
   font-family: "Lato", sans-serif;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -21,6 +20,11 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     /* animation-delay: 500ms; */
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   
   &__sub {
@@ -29,6 +33,10 @@ body {
     font-weight: 400;
     letter-spacing: 1.75rem;
     animation: moveInFromRight ease-out 1s;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 
