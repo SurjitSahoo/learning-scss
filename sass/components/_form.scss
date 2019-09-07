@@ -15,6 +15,10 @@
     color: inherit;
     padding: 1.5rem 2rem;
     transition: all .3s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
     
     &:focus {
       outline: none;
@@ -50,6 +54,11 @@
     display: inline-block;
     width: 49%;
     position: relative;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-label {
